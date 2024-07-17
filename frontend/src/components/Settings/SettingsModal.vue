@@ -43,6 +43,7 @@ import PhoneIcon from '@/components/Icons/PhoneIcon.vue'
 import ProfileSettings from '@/components/Settings/ProfileSettings.vue'
 import WhatsAppSettings from '@/components/Settings/WhatsAppSettings.vue'
 import TwilioSettings from '@/components/Settings/TwilioSettings.vue'
+import ExotelSettings from './ExotelSettings.vue'
 import SidebarLink from '@/components/SidebarLink.vue'
 import { isWhatsappInstalled } from '@/composables/settings'
 import { Dialog } from 'frappe-ui'
@@ -70,6 +71,11 @@ const tabs = computed(() => {
           label: 'Twilio',
           icon: PhoneIcon,
           component: markRaw(TwilioSettings),
+        },
+        {
+          label: 'Exotel',
+          icon: PhoneIcon,
+          component: markRaw(ExotelSettings),
         },
         {
           label: 'WhatsApp',
